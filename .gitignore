@@ -1,4 +1,5 @@
 server/node_modules
 webapp/dist
 webapp/node_modules
+loadtest/node_modules
 
