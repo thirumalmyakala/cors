@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+  labels:
+    app: webapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: 637423172833.dkr.ecr.us-east-1.amazonaws.com/cors/webapp
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PROXY_URL
+              value: "http://a0881fe65f9934f8b9b03457deca86a2-1723200037.us-east-1.elb.amazonaws.com"
