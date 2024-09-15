@@ -3,8 +3,8 @@ import { check } from 'k6';
 
 export const options = {
   duration: '2m',
-  vus: 3000,  // Adjust based on desired RPS
-  rps: 3000,  // Requests per second
+  vus: 2000,  // Adjust based on desired RPS
+  rps: 2000,  // Requests per second
 };
 
 export default function () {
