@@ -1,5 +1,5 @@
 FROM node:18
-LABEL Thirumal thirumal@gmail.com
+LABEL name=Thirumal email=thirumal@gmail.com
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
